@@ -1,0 +1,26 @@
+- name: hello endpoint returns success
+  endpoint:
+    function: hello
+    method: GET
+    path: /
+  response:
+    body: success
+
+- name: "a_function endpoint returns a_message"
+  endpoint:
+    method: GET
+    path: /1
+  response:
+    status: 200
+    body:
+      a_message: Success from a function
+
+- name: another_function endpoint returns another_message
+  endpoint:
+    function: another_function
+    method: GET
+    path: /
+  response:
+    status: 200
+    body:
+      another_message: Another function called

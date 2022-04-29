@@ -1,0 +1,32 @@
+org: mughalusama
+app: serverlesstesting
+service: serverlesstesting
+
+frameworkVersion: '3'
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+
+
+functions:
+  hello:
+    handler: handler.hello
+    events:
+      - httpApi:
+          path: '/'
+          method: 'get'
+
+  a_sls_function:
+    handler: handler.a_function
+    events:
+      - httpApi:
+          path: '/1'
+          method: 'get'
+
+  another_sls_function:
+    handler: handler.another_function
+    events:
+      - httpApi:
+          path: '/2'
+          method: 'get'
