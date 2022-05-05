@@ -11,7 +11,7 @@
     method: GET
     path: /1
   response:
-    status: 200
+    status: 201
     body:
       a_message: Success from a function
 
@@ -19,8 +19,8 @@
   endpoint:
     function: another_function
     method: GET
-    path: /
+    path: /2
   response:
-    status: 200
+    status: 204
     body:
       another_message: Another function called
